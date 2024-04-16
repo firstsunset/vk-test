@@ -19,15 +19,12 @@ function App() {
   const [search, setSearch] = useState('');
   const [currentPage, setCurrentPage] = useState(0);
   const [fetching, setFetching] = useState(true);
-  const [isChecked, setIsChecked] = useState(false);
   const [checkboxes, setCheckboxes] = useState<Array<boolean>>([]);
   const [isButtonActive, setIsButtonActive] = useState<boolean>(true);
   const ref = useRef<HTMLInputElement>(null);
-
-  console.log('b', isButtonActive);
    
   useEffect(() => {
-    if (search && fetching) {
+    if (search && fetching && isButtonActive ) {
       console.log('fetchi');
       
       axios.get(`https://vk-testing-api.vk-mini-apps-dev.magicgophers.com/?query=${search}&take=15&skip=${currentPage}`)
@@ -37,7 +34,7 @@ function App() {
             })
             .finally(() => setFetching(false));
     }
-  }, [search, fetching])
+  }, [search, fetching, isButtonActive])
 
   useEffect(() => {
     if (list.length) {
@@ -75,7 +72,7 @@ function App() {
 
   const handleSend = () => {
     setList([]);
-    setFetching(false);
+    setFetching(true);
     setSearch('');
   };
 
@@ -104,7 +101,8 @@ function App() {
               className='content-search' 
               type="text" 
               placeholder='Имя'
-              onChange={(e) => setSearch(e.target.value)} 
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
             />
           </div>
           {list.length > 0 && (
