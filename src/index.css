@@ -11,3 +11,155 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  margin: 0;
+}
+
+.layout {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 375px;
+  height: 815px;
+  background-color: #007AFF;
+  border-radius: 20px;
+}
+
+.status-bar {
+  height: 48px;
+  padding-left: 23px;
+  padding-right: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF
+}
+
+.status-bar-icons {
+  display: flex;
+  gap: 5px;
+}
+
+.header {
+  height: 52px;
+  padding: 10px 8px 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-buttons {
+  height: 32px;
+  padding: 4px 10px;
+  background-color: #0e6bcf;
+  border-radius: 10px;  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-buttons-line {
+  height: 25px;
+  border-right: 1px solid #007AFF;
+}
+
+h1 {
+  margin-bottom: 18px;
+  padding-left: 17px;
+  color: #FFFFFF
+}
+
+.content {
+  height: 656px;
+  background-color: #F2F2F7;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.content-search-block {
+  padding: 12px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}
+
+.content-search {
+  height: 51px;
+  width: 90%;
+  border-radius: 12px;
+  background-color: #F2F2F7;
+  border: none;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.content-list {
+  height: 370px;
+  margin-top: 24px;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #FFFFFF;
+  overflow-y: scroll;
+}
+
+.content-list-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.content-list-row {
+  height: 24px;
+  display: flex;
+  gap: 10px;
+}
+
+.checkbox {
+  border: 2px solid #007AFF;
+}
+
+input[type="checkbox"] {
+  accent-color: #007AFF;
+	outline: none;
+}
+
+.content-button {
+  width: 95%;
+  height: 50px;
+  border-radius: 16px;
+  background-color: rgba(0, 122, 255, 100%);
+  border: none;
+  color: #FFFFFF;
+  font-size: 17px;
+  position: absolute;
+  bottom: 50px;
+  cursor: pointer;
+}
+
+.content-button-active {
+  width: 95%;
+  height: 50px;
+  border-radius: 16px;
+  background-color: rgba(0, 122, 255, 40%);
+  border: none;
+  color: #FFFFFF;
+  font-size: 17px;
+  position: absolute;
+  bottom: 50px;
+  cursor: pointer;
+}
